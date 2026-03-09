@@ -1,0 +1,12 @@
+// we are creating another collection in our database to blacklist token
+const mongoose = require("mongoose")
+const blacklistTokenSchema = new mongoose.Schema({
+    token:{
+        type:String,
+        required: [true,"token is required to be addded in blacklist"]
+    },
+},{
+        timestamps: true
+    })
+     const tokenBlacklistModel = mongoose.model("blacklistTokens",blacklistTokenSchema)
+     module.exports = tokenBlacklistModel

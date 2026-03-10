@@ -1,11 +1,14 @@
  import React from 'react'
  import "../auth.form.scss"
  function Login() {
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+    }
    return (
      <main>
-        <div className="Form-container">
+        <div className="form-container">
             <h1>Login</h1>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <div className="input-group">
                     <label htmlFor="email">Email</label>
                     <input type="email"  id='email' placeholder='Enter email address'/>

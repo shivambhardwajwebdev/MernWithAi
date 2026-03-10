@@ -1,5 +1,6 @@
 import React from 'react'
  import "../auth.form.scss"
+import {Link} from "react-router";
 function Register() {
    const handleSubmit=(e)=>{
         e.preventDefault()
@@ -25,6 +26,7 @@ function Register() {
                 </div>
                 <button className="button primary-button">Register</button>
             </form>
+            <p>Already have an account? <Link to={"/login"}>Login</Link></p>
         </div>
      </main>
    )
